@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Secret Message</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Secret Message</h1>
+      <textarea
+        id="input_text"
+        placeholder="Enter Text"
+        autocomplete="off"
+        spellcheck="off"
+      ></textarea>
+      <textarea
+        id="output_text"
+        placeholder="Result will appear here"
+        disabled
+      ></textarea>
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        autocomplete="off"
+      />
+      <button id="enc_btn">Encrypt</button>
+      <button id="dec_btn">Decrypt</button>
+    </div>
+  </body>
+</html>
