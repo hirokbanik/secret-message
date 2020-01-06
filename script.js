@@ -11,7 +11,8 @@ const url = new URL(window.location);
 
 if (navigator.share) wrapper.classList.remove("desktop");
 else wrapper.classList.add("desktop");
-if (url.searchParams.get("m")) input_text.value = url.searchParams.get("m");
+if (url.searchParams.get("m"))
+  input_text.value = decodeURI(url.searchParams.get("m"));
 
 wrapper.addEventListener("click", e => {
   const target = e.target;
