@@ -12,7 +12,7 @@ const url = new URL(window.location);
 if (navigator.share) wrapper.classList.remove("desktop");
 else wrapper.classList.add("desktop");
 if (url.searchParams.get("m"))
-  input_text.value = decodeURI(url.searchParams.get("m"));
+  input_text.value = $desan(url.search.replace("?m=", ""));
 
 wrapper.addEventListener("click", e => {
   const target = e.target;
@@ -53,7 +53,7 @@ async function share() {
   const data = {
     title: "A secret message for you!",
     text: output_text.value,
-    url: `${url.origin}/?m=${encodeURI(output_text.value)}`
+    url: `${url.origin}/?m=${$san(output_text.value)}`
   };
   try {
     await navigator.share(data);
@@ -75,6 +75,7 @@ function validate(el) {
 
 // ENCRYPT FUNCTION
 function encrypt(text, pass) {
+  // debugger;
   let enc_text = CryptoJS.AES.encrypt($san(text), $san(pass)).toString();
   display(enc_btn, "innerText", "DONE!");
   return enc_text;
@@ -110,10 +111,10 @@ function display(el, prop, value) {
 
 // SANITIZE
 function $san(text) {
-  return encodeURI(text);
+  return encodeURIComponent(text);
 }
 function $desan(text) {
-  return decodeURI(text);
+  return decodeURIComponent(text);
 }
 // CUSTOM ELEMENT SELECTOR
 function $(el) {
