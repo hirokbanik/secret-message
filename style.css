@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lexend Deca", sans-serif;
+  color: #555;
 }
 html,
 body {
@@ -21,19 +22,21 @@ body {
   width: 320px;
   height: 600px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 5fr 5fr 1fr 1fr;
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 4fr 4fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 1.2rem;
   padding: 1.5rem;
 }
 @media screen and (min-width: 321px) {
   .wrapper {
+    position: relative;
     border-radius: 1.5rem;
     box-shadow: 0.3rem 0.3rem 0.7rem 0 #888, -0.3rem -0.3rem 0.7rem 0 #fff;
   }
 }
-.wrapper > * {
-  grid-column: span 2;
+.wrapper * {
+  grid-column: span 6;
   background-color: transparent;
   border: none;
   box-shadow: 0.3rem 0.3rem 0.7rem 0 #888, -0.3rem -0.3rem 0.7rem 0 #fff;
@@ -50,26 +53,47 @@ textarea {
   border-radius: 1rem;
   padding: 1rem;
   resize: none;
+  /* font-size: 1rem; */
   transition: box-shadow 0.2s;
 }
 textarea::placeholder {
   text-align: center;
+  transition: color 0.2s;
 }
+textarea:focus::placeholder {
+  color: #aaa;
+}
+
 input {
   border-radius: 0.5rem;
   padding: 0 1rem 0;
   text-align: center;
   transition: box-shadow 0.2s;
   letter-spacing: 0.1rem;
+  /* box-shadow: none !important; */
 }
+input::placeholder {
+  letter-spacing: 0 !important;
+  transition: color 0.2s;
+}
+input:focus::placeholder {
+  color: #aaa;
+}
+input.active {
+  /* box-shadow: inherit !important; */
+}
+
 button {
-  grid-column: span 1 !important;
+  grid-column: span 2 !important;
   border-radius: 0.5rem;
   font-weight: bold;
-  color: #555;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, color 0.2s;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+}
+#enc_btn,
+#dec_btn {
+  grid-column: span 3 !important;
 }
 button:active {
   box-shadow: 0.1rem 0.1rem 0.3rem 0 #888, -0.1rem -0.1rem 0.3rem 0 #fff;
@@ -79,4 +103,13 @@ textarea:focus,
 input:focus {
   outline: none;
   box-shadow: 0.1rem 0.1rem 0.3rem 0 #888, -0.1rem -0.1rem 0.3rem 0 #fff;
+}
+
+.wrapper.desktop button#share_btn {
+  display: none !important;
+}
+
+.wrapper.desktop button#copy_btn,
+.wrapper.desktop button#reset_btn {
+  grid-column: span 3 !important;
 }
