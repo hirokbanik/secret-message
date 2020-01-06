@@ -8,7 +8,7 @@ const copy_btn = $("#copy_btn");
 const reset_btn = $("#reset_btn");
 const share_btn = $("#share_btn");
 
-if (!navigator.share) wrapper.classList.remove("desktop");
+if (navigator.share) wrapper.classList.remove("desktop");
 else wrapper.classList.add("desktop");
 
 wrapper.addEventListener("click", e => {
