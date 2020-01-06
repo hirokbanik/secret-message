@@ -74,32 +74,19 @@ function validate(el) {
 
 // ENCRYPT FUNCTION
 function encrypt(text, pass) {
-  let enc_text = btoa(text).split("");
-  let enc_pass = btoa(pass);
-
-  enc_text.splice(Math.floor(Math.random() * enc_text.length), 0, enc_pass);
-  enc_text = btoa(enc_text.join(""));
-
+  let enc_text = CryptoJS.AES.encrypt($san(text), $san(pass)).toString();
   display(enc_btn, "innerText", "DONE!");
-
   return enc_text;
 }
 
 // DECRYPT FUNCTION
 function decrypt(text, pass) {
-  debugger;
-  if (atob(text).indexOf(btoa(pass)) < 0) {
-    display(dec_btn, "innerText", "ERROR!");
-    return "ERROR!";
-  }
-  try {
-    var dec_text = atob(atob(text).replace(btoa(pass), ""));
-  } catch (err) {
-    display(dec_btn, "innerText", "ERROR!");
-    return "ERROR!";
-  }
-  display(dec_btn, "innerText", "DONE!");
-  return dec_text;
+  let dec_text = CryptoJS.AES.decrypt(text, $san(pass)).toString(
+    CryptoJS.enc.Utf8
+  );
+  if (dec_text) display(dec_btn, "innerText", "DONE!");
+  else display(dec_btn, "innerText", "ERROR!");
+  return $desan(dec_text);
 }
 
 // DISPLAY MESSAGE
@@ -120,6 +107,13 @@ function display(el, prop, value) {
   }, 200);
 }
 
+// SANITIZE
+function $san(text) {
+  return encodeURI(text);
+}
+function $desan(text) {
+  return decodeURI(text);
+}
 // CUSTOM ELEMENT SELECTOR
 function $(el) {
   return document.querySelector(el);
