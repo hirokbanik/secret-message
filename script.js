@@ -43,6 +43,8 @@ function encrypt(text, pass) {
 
 // DECRYPT FUNCTION
 function decrypt(text, pass) {
+  if(!(atob(text).indexOf(pass)))
+    return "Invalid text/password";
   try {
     var dec_text = atob(atob(text).replace(btoa(pass), ""));
   } catch (err) {
