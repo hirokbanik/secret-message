@@ -6,10 +6,10 @@
   "display": "standalone",
   "start_url": "https://tfaq-secret-message.now.sh/",
   "short_name": "Secret Message",
-  "theme_color": "transparent",
+  "theme_color": "#cccccc",
   "description": "A simple app to encrypt and decrypt messages with password",
   "orientation": "portrait",
-  "background_color": "transparent",
+  "background_color": "#cccccc",
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
