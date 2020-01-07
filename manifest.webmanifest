@@ -1,0 +1,113 @@
+{
+  "dir": "ltr",
+  "lang": "en",
+  "name": "Secret Message",
+  "scope": "/",
+  "display": "standalone",
+  "start_url": "https://tfaq-secret-message.now.sh/",
+  "short_name": "Secret Message",
+  "theme_color": "transparent",
+  "description": "A simple app to encrypt and decrypt messages with password",
+  "orientation": "portrait",
+  "background_color": "transparent",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/images/2f61bce3-63e1-1d45-d7e8-9bb794eef07a.webPlatform.png",
+      "sizes": "44x44",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/03a76d47-86b2-ffbe-ba40-61d0e435eda3.webPlatform.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/32faa4fe-791e-2afb-9a6e-14b7b8c89760.webPlatform.png",
+      "sizes": "1240x600",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/7a75453e-f1cc-7c51-aca1-ff0005252028.webPlatform.png",
+      "sizes": "300x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/17fc71f0-5ec6-f4a6-0509-6db5a7abde76.webPlatform.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/3535ba46-4c4c-bb53-95a6-a94c641e6424.webPlatform.png",
+      "sizes": "88x88",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/0f346323-3d3e-3937-0d93-bdff65611b9f.webPlatform.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/bbe6f98a-317f-f95b-0c58-529a4a174843.webPlatform.png",
+      "sizes": "50x50",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/f562a65e-795d-d4b1-b564-7a2731ebcf1b.webPlatform.png",
+      "sizes": "620x300",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/d5ec4308-cd6c-3056-b39a-bbb7a94bab0d.webPlatform.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/7d4912eb-591b-8b21-c396-4545e70d46ec.webPlatform.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/7701c103-dae4-827b-29a7-fe2924372a91.webPlatform.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/f52fbfbe-19c4-983a-3c57-571811eeb4c5.webPlatform.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/59674591-5945-e4f2-293b-5164f36764cd.webPlatform.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/5d33f6f9-ba5a-0c63-81f4-a8fb26dba583.webPlatform.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/98f4bdd8-1b20-3bf0-82e7-6fdfa2a0479d.webPlatform.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/527bc76c-eac4-7787-ce02-7faf7f84c1b5.webPlatform.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/849e7d3a-474f-a128-315f-4277561945c1.webPlatform.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/77cb5f1a-1647-5a3f-64d2-bf2b0ec9ac39.webPlatform.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": []
+}
