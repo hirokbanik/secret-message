@@ -27,17 +27,21 @@ wrapper.addEventListener("click", e => {
 });
 
 // COPY OUTPUT TEXT
-function copy() {
+async function copy() {
   if (!output_text.value.length) {
     display(copy_btn, "innerText", "EMPTY!");
     return;
   }
-  output_text.disabled = false;
-  output_text.select();
-  output_text.setSelectionRange(0, output_text.value.length);
-  document.execCommand("copy");
-  output_text.disabled = true;
-  display(copy_btn, "innerText", "COPIED!");
+  let t = "Guess the password 😋 \n";
+  let u = `${url.origin}/?m=${$san(output_text.value)}`;
+  // output_text.disabled = false;
+  // output_text.select();
+  // output_text.setSelectionRange(0, output_text.value.length);
+  // document.execCommand("copy");
+  // output_text.disabled = true;
+  await navigator.clipboard
+    .writeText(t + u)
+    .then(display(copy_btn, "innerText", "COPIED!"));
 }
 
 // RESET INPUT FIELDS
@@ -56,7 +60,7 @@ async function share() {
   }
   const data = {
     title: "A secret message for you!",
-    text: "Guess the password 😋",
+    text: "Guess the password 😋 \n",
     url: `${url.origin}/?m=${$san(output_text.value)}`
   };
   try {
