@@ -52,7 +52,7 @@ function reset() {
 async function share() {
   const data = {
     title: "A secret message for you!",
-    text: output_text.value,
+    text: "Guess the Password 😋",
     url: `${url.origin}/?m=${$san(output_text.value)}`
   };
   try {
