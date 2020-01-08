@@ -50,9 +50,13 @@ function reset() {
 
 // SHARE FUNCTION
 async function share() {
+  if (!output_text.value) {
+    display(share_btn, "innerText", "EMPTY!");
+    return;
+  }
   const data = {
     title: "A secret message for you!",
-    text: "Guess the Password 😋\n",
+    text: output_text.value,
     url: `${url.origin}/?m=${$san(output_text.value)}`
   };
   try {
