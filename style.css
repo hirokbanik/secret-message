@@ -49,6 +49,7 @@ h1 {
   box-shadow: none !important;
   text-shadow: 0.2rem 0.2rem 0.3rem #666, -0.2rem -0.2rem 0.3rem #fff;
   color: #ccc;
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
 }
 textarea {
