@@ -13,8 +13,11 @@ html,
 body {
   height: 100%;
   width: 100%;
+}
+body {
   background-color: #ccc;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
 }
@@ -82,9 +85,6 @@ input::placeholder {
 }
 input:focus::placeholder {
   color: #aaa;
-}
-input.active {
-  /* box-shadow: inherit !important; */
 }
 
 button {
